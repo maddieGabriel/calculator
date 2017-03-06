@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en-CAN">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Online Calculator!</title>
+		<link rel="shortcut icon" href="cool.ico">
+		<link rel="stylesheet" href="onlineCalculator.css">
+	</head>
+
+	<body>
+		<!-- HEADER WITH LOGO -->
+		<header>
+			<a href="#">
+				<img src="http://i63.tinypic.com/mkhljm.png" alt="ONLINE CALCULATOR">
+	    </a>
+	    <div>
+		    <nav id="nav">
+		     	<ul>
+		     		<li> <a href="#">Home</a> </li>
+	       		<li> <a href="#">About</a> </li>
+		        <li> <a href="#">Contact</a> </li>
+		      </ul>
+		    </nav>
+	    </div>
+	  </header>
+
+	  <!-- CALCULATOR -->
+		<center> <br> <br> <br> <br> <br>
+		<div id="border"> <br> <br> 
+			<div id="shadow"> 
+				<form name="Calculator" style="background-color:#f2f2f2;">
+					<!-- screen (where output goes) -->
+					<input name="output" placeholder="0 " id="outputScreen"/>
+					<!-- first row of buttons (C % /) -->
+					<input type="button" value="C" onClick="buttonClear()" class="bigButton"/>
+					<input type="button" value="%" onClick="buttonPercent()" class="operation"/>
+					<input type="button" value="/" onClick="buttonDivide()" class="operation"/> <br> 
+					<!-- second row of buttons (7 8 9 +) -->
+					<input type="button" value="7" onClick="document.Calculator.output.value +='7'" class="digit"/>
+					<input type="button" value="8" onClick="document.Calculator.output.value +='8'" class="digit"/>
+					<input type="button" value="9" onClick="document.Calculator.output.value +='9'" class="digit"/>
+					<input type="button" value="+" onClick="buttonPlus()" class="operation"/> <br> 
+					<!-- third row of buttons (4 5 6 -) -->
+					<input type="button" value="4" onClick="document.Calculator.output.value +='4'" class="digit"/>
+					<input type="button" value="5" onClick="document.Calculator.output.value +='5'" class="digit"/>
+					<input type="button" value="6" onClick="document.Calculator.output.value +='6'" class="digit"/>
+					<input type="button" value="-" onClick="buttonMinus()" class="operation"/> <br> 
+					<!-- fourth row of buttons (1 2 3 x) -->
+					<input type="button" value="1" onClick="document.Calculator.output.value +='1'" class="digit"/>
+					<input type="button" value="2" onClick="document.Calculator.output.value +='2'" class="digit"/>
+					<input type="button" value="3" onClick="document.Calculator.output.value +='3'" class="digit"/>
+					<input type="button" value="*" onClick="buttonMult()" class="operation"/> <br>
+					<!-- fifth row of buttons (0 % . ÷) -->
+					<input type="button" value="." onClick="buttonDecimal()" class="operation"/>
+					<input type="button" value="0" onClick="document.Calculator.output.value +='0'" class="digit"/>
+					<input type="button" value="=" onClick="document.Calculator.output.value = eval(document.Calculator.output.value)" class="bigButton"/>
+				</form>
+			</div>
+		</div>
+		</center>
+	</body>
+</html>
+
+<!-- mathy functions for each operation button -->
+<SCRIPT>
+	function buttonPlus() {
+		document.Calculator.output.value += "+"; }
+	function buttonMinus() {
+		document.Calculator.output.value += "-";
+	}
+	function buttonMult() {
+		document.Calculator.output.value += "*";
+	}
+	function buttonPercent() {
+		document.Calculator.output.value += "%";
+	}
+	function buttonDecimal() {
+		document.Calculator.output.value += ".";
+	}
+	function buttonDivide() {
+		document.Calculator.output.value += "/";
+	}
+	function buttonClear() {
+		document.Calculator.output.value = "";
+  }
+</SCRIPT>	
