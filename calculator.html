@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en-CAN">
+
+    <head>
+	    <link rel="stylesheet" href="calculator.css">
+        <!-- page title and icon -->
+        <title>Maddie's Calculator!</title>
+        <link rel="shortcut icon" href="images/cool.ico">
+    </head>
+
+    <body>
+        <!-- HEADER WITH LOGO -->
+        <header>
+            <a href="#"><img src="images/header.png" alt="ONLINE CALCULATOR"></a>
+            <div>   
+                <nav class="nav">
+                    <ul>
+                        <li> <a href="#">Home</a> </li>
+                        <li> <a href="#">About</a> </li>
+                        <li> <a href="#">Contact</a> </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- CALCULATOR FORM -->
+        <div class="border">
+            <div class="calcForm">
+                <form name="Calculator">
+                    <!-- screen (where output goes) -->
+                    <input name="output" placeholder="0 " class="outputScreen"/>
+                    <!-- first row of buttons (C % /) -->
+                    <input type="button" value="C" onClick="document.Calculator.output.value = ''" class="clearButton"/>
+                    <input type="button" value="%" onClick="document.Calculator.output.value += '%'" class="operation percentButton"/>
+                    <input type="button" value="/" onClick="document.Calculator.output.value += '/'" class="operation"/> <br> 
+                    <!-- second row of buttons (7 8 9 +) -->
+                    <input type="button" value="7" onClick="document.Calculator.output.value +='7'" class="digit"/>
+                    <input type="button" value="8" onClick="document.Calculator.output.value +='8'" class="digit"/>
+                    <input type="button" value="9" onClick="document.Calculator.output.value +='9'" class="digit"/>
+                    <input type="button" value="+" onClick="document.Calculator.output.value += '+'" class="operation"/> <br> 
+                    <!-- third row of buttons (4 5 6 -) -->
+                    <input type="button" value="4" onClick="document.Calculator.output.value +='4'" class="digit"/>
+                    <input type="button" value="5" onClick="document.Calculator.output.value +='5'" class="digit"/>
+                    <input type="button" value="6" onClick="document.Calculator.output.value +='6'" class="digit"/>
+                    <input type="button" value="-" onClick="document.Calculator.output.value += '-'" class="operation"/> <br> 
+                    <!-- fourth row of buttons (1 2 3 x) -->
+                    <input type="button" value="1" onClick="document.Calculator.output.value +='1'" class="digit"/>
+                    <input type="button" value="2" onClick="document.Calculator.output.value +='2'" class="digit"/>
+                    <input type="button" value="3" onClick="document.Calculator.output.value +='3'" class="digit"/>
+                    <input type="button" value="*" onClick="document.Calculator.output.value += '*'" class="operation"/> <br>
+                    <!-- fifth row of buttons (. 0 =) -->
+                    <input type="button" value="." onClick="document.Calculator.output.value += '.'" class="operation"/>
+                    <input type="button" value="0" onClick="document.Calculator.output.value +='0'" class="digit"/>
+                    <input type="button" value="=" onClick="document.Calculator.output.value = eval(document.Calculator.output.value)" class="equalButton"/>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
